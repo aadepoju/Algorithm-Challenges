@@ -7,23 +7,22 @@ public class TextToNumbers {
 			"hundred","thousand","million"};
 	
 	public static void main(String[] args) throws IOException {
-		// TODO Auto-generated method stub
-		
 		//populating the map dictionary. 
 		mapper = new HashMap<>();
 		populateMap();
 		
+		//reading each text representation of number from file.
 		File file = new File(args[0]);
-        BufferedReader buffer = new BufferedReader(new FileReader(file));
-        String line;
-        while ((line = buffer.readLine()) != null) {
+        	BufferedReader buffer = new BufferedReader(new FileReader(file));
+        	String line;
+        	while ((line = buffer.readLine()) != null) {
         	
-            line = line.trim();
-            // Process line of input Here
-            String[] text = line.split(" ");
-            int number = getNumValue(text);
-            System.out.println(number);
-        }
+            		line = line.trim();
+            		// Splitting the text representation of number into an array, for easier parsing.
+            		String[] text = line.split(" ");
+            		int number = getNumValue(text);
+            		System.out.println(number);
+        	}
 	}
 	
 	//This method is built to populate the word to number mapper. 
@@ -54,9 +53,9 @@ public class TextToNumbers {
 		int sol = 0;
 		int index1 = 0;
 		if(input[0].equals("negative")){
-        	isNeg = true;
-        	index1++;
-        }
+        		isNeg = true;
+        		index1++;
+        	}
 		//temp variable to store values up to hundred's place.
 		int val = 0;
 		while(index1 < input.length){
