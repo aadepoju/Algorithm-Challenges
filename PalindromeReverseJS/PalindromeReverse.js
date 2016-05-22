@@ -2,7 +2,6 @@
 var fs  = require("fs");
 fs.readFileSync(process.argv[2]).toString().split('\n').forEach(function (line) {
     if (line != "") {
-        //do something here
     	var count = 0;
     	var currString = line;
     	while(!isPalindrome(currString)){
@@ -15,7 +14,6 @@ fs.readFileSync(process.argv[2]).toString().split('\n').forEach(function (line) 
     		currString = (val1 + val2).toString();
     	}
         console.log(count + " " + currString);
-    	
     }
 });
 
