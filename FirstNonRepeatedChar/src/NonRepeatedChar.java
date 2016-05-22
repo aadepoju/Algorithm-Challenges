@@ -8,7 +8,7 @@ public class NonRepeatedChar {
 		System.out.println(findNonRepeatedChar("moo"));
 		System.out.println(findNonRepeatedChar("f0fi"));
 		System.out.println(findNonRepeatedChar("\0"));
-		System.out.println(findNonRepeatedChar("geeksforgeeks"));
+		System.out.println(findNonRepeatedChar("SleepOrSleep"));
 		
 
 	}
